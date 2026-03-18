@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シンキカイタク｜貴社専任の外付け営業部隊が決裁者のアポイントを獲得します</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #1a2744;
+      --navy-light: #243460;
+      --navy-dark: #111b33;
+      --accent: #e8820c;
+      --accent-hover: #d4720a;
+      --accent-gold: #f0a030;
+      --white: #ffffff;
+      --gray-light: #f4f6fa;
+      --gray-mid: #e8ecf5;
+      --gray-text: #666;
+      --text: #222;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--navy);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .nav-logo span {
+      color: var(--accent-gold);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 6px 10px;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-menu a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .nav-menu .nav-cta a {
+      background: var(--accent);
+      color: var(--white);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .nav-menu .nav-cta a:hover {
+      background: var(--accent-hover);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      padding-top: 64px;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(232,130,12,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(240,160,48,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(232,130,12,0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent-gold);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title .highlight {
+      color: var(--accent-gold);
+    }
+
+    .hero-sub {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 48px;
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    .method-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .method-tag {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.82rem;
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-gold) 100%);
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px 44px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(232,130,12,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.04em;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(232,130,12,0.55);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 56px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ===== SECTION COMMON ===== */
+    section {
+      padding: 96px 24px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--gray-text);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    /* ===== ISSUES ===== */
+    #issues {
+      background: var(--gray-light);
+    }
+
+    .issues-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .issue-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 28px;
+      box-shadow: 0 4px 20px rgba(26,39,68,0.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+      border-top: 4px solid var(--accent);
+    }
+
+    .issue-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(26,39,68,0.14);
+    }
+
+    .issue-icon {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+    }
+
+    .issue-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .issue-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .check-mark {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--gray-text);
+    }
+
+    .check-mark::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ===== FLOW ===== */
+    #flow {
+      background: var(--white);
+    }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .flow-card {
+      background: var(--gray-light);
+      border-radius: 16px;
+      padding: 40px 28px;
+      text-align: center;
+      transition: transform 0.25s, border-color 0.25s;
+      border-bottom: 3px solid transparent;
+    }
+
+    .flow-card:hover {
+      transform: translateY(-4px);
+      border-bottom-color: var(--accent);
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-gold) 100%);
+      color: var(--white);
+      font-size: 1.3rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(232,130,12,0.35);
+    }
+
+    .step-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .step-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--gray-text);
+      line-height: 1.7;
+    }
+
+    /* ===== METHODS ===== */
+    #methods {
+      background: var(--navy);
+    }
+
+    #methods .section-title {
+      color: var(--white);
+    }
+
+    #methods .section-label {
+      color: var(--accent-gold);
+    }
+
+    #methods .section-desc {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .method-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 40px 28px;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    .method-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+    }
+
+    .method-icon {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .method-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+    }
+
+    .method-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+    }
+
+    /* ===== PRICING ===== */
+    #pricing {
+      background: var(--gray-light);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+
+    .plan-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 44px 32px;
+      box-shadow: 0 4px 24px rgba(26,39,68,0.08);
+      position: relative;
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(26,39,68,0.14);
+    }
+
+    .plan-card.featured {
+      background: var(--navy);
+      box-shadow: 0 12px 48px rgba(26,39,68,0.25);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-gold) 100%);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 20px;
+      border-radius: 20px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(232,130,12,0.4);
+    }
+
+    .plan-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .plan-card.featured .plan-name {
+      color: var(--accent-gold);
+    }
+
+    .plan-price {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .plan-card.featured .plan-price {
+      color: var(--white);
+    }
+
+    .plan-price-unit {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--gray-text);
+    }
+
+    .plan-card.featured .plan-price-unit {
+      color: rgba(255,255,255,0.65);
+    }
+
+    .plan-price-note {
+      font-size: 0.82rem;
+      color: var(--gray-text);
+      margin-bottom: 28px;
+    }
+
+    .plan-card.featured .plan-price-note {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .plan-divider {
+      height: 1px;
+      background: var(--gray-mid);
+      margin-bottom: 24px;
+    }
+
+    .plan-card.featured .plan-divider {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .plan-feature {
+      font-size: 0.9rem;
+      color: var(--text);
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .plan-card.featured .plan-feature {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .plan-feature::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      line-height: 1.6;
+    }
+
+    .plan-card.featured .plan-feature::before {
+      color: var(--accent-gold);
+    }
+
+    .plan-cta {
+      margin-top: 28px;
+    }
+
+    .btn-outline {
+      display: block;
+      text-align: center;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-outline:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .plan-card.featured .btn-outline {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-gold) 100%);
+      color: var(--white);
+      border-color: transparent;
+      box-shadow: 0 4px 16px rgba(232,130,12,0.4);
+    }
+
+    .plan-card.featured .btn-outline:hover {
+      box-shadow: 0 8px 24px rgba(232,130,12,0.5);
+      filter: brightness(1.05);
+    }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: 36px;
+      font-size: 0.9rem;
+      color: var(--gray-text);
+    }
+
+    .pricing-note strong {
+      color: var(--navy);
+    }
+
+    /* ===== FAQ ===== */
+    #faq {
+      background: var(--white);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--gray-mid);
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--gray-mid);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 24px 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover {
+      color: var(--accent);
+    }
+
+    .faq-q-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 900;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .faq-q-text {
+      flex: 1;
+      line-height: 1.5;
+    }
+
+    .faq-icon {
+      font-size: 1.4rem;
+      color: var(--accent);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 4px;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 0 24px 44px;
+    }
+
+    .faq-answer-text {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--gray-text);
+      line-height: 1.8;
+    }
+
+    .faq-a-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 900;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    /* ===== FORM ===== */
+    #contact {
+      background: var(--navy);
+    }
+
+    #contact .section-title {
+      color: var(--white);
+    }
+
+    #contact .section-label {
+      color: var(--accent-gold);
+    }
+
+    #contact .section-desc {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .form-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 20px;
+      padding: 56px 48px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .form-group label .required {
+      color: var(--accent);
+      margin-left: 4px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--gray-mid);
+      border-radius: 10px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(232,130,12,0.12);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-gold) 100%);
+      color: var(--white);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px 64px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(232,130,12,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.06em;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(232,130,12,0.5);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 56px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 32px;
+    }
+
+    .footer-logo {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .footer-logo span {
+      color: var(--accent-gold);
+    }
+
+    .footer-company {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .footer-info p {
+      font-size: 0.88rem;
+      line-height: 1.9;
+    }
+
+    .footer-info a {
+      color: var(--accent-gold);
+      text-decoration: none;
+    }
+
+    .footer-info a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+
+    .footer-nav a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--navy-dark);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px;
+        gap: 4px;
+        overflow-y: auto;
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-menu a {
+        font-size: 1rem;
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      section {
+        padding: 64px 20px;
+      }
+
+      .hero-stats {
+        gap: 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-wrap {
+        padding: 36px 24px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .faq-answer-inner {
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .btn-primary {
+        padding: 16px 32px;
+        font-size: 0.95rem;
+      }
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    /* Center helper */
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">シンキ<span>カイタク</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#issues">課題</a></li>
+        <li><a href="#flow">仕組み</a></li>
+        <li><a href="#methods">戦略・手法</a></li>
+        <li><a href="#pricing">料金</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li class="nav-cta"><a href="#contact">お申し込み</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">従業員1〜50名の企業様向け</div>
+      <h1 class="hero-title">
+        貴社専任の<br>
+        <span class="highlight">外付け営業部隊</span>が<br>
+        決裁者の<br>
+        アポイントを<br>
+        獲得します
+      </h1>
+      <div class="hero-sub">
+        <p>問い合わせフォーム営業 × テレアポ × 手書き風手紙で<br>商談のアポイントを獲得します</p>
+        <div class="method-tags">
+          <span class="method-tag">📧 フォーム営業</span>
+          <span class="method-tag">📞 テレアポ</span>
+          <span class="method-tag">✉️ 手書き風手紙</span>
+        </div>
+      </div>
+      <a href="#contact" class="btn-primary">今すぐ無料で相談する</a>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">つのアプローチ</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">6<small style="font-size:1rem">ヶ月</small></span>
+          <span class="stat-label">最低利用期間</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">全国</span>
+          <span class="stat-label">完全オンライン対応</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ISSUES ===== -->
+  <section id="issues">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">CHALLENGES</span>
+        <h2 class="section-title">このような課題が<br>ありませんか？</h2>
+        <p class="section-desc">営業活動に課題を感じているなら、シンキカイタクがまるごと解決します。</p>
+      </div>
+      <div class="issues-grid">
+        <div class="issue-card fade-in fade-in-delay-1">
+          <div class="issue-icon">📚</div>
+          <div class="issue-num">ISSUE 01</div>
+          <div class="issue-text">営業のノウハウを<br>貯めたい</div>
+          <div class="check-mark">専任チームが実績ある手法を蓄積・共有</div>
+        </div>
+        <div class="issue-card fade-in fade-in-delay-2">
+          <div class="issue-icon">💰</div>
+          <div class="issue-num">ISSUE 02</div>
+          <div class="issue-text">営業を一人雇うより<br>安く抑えたい</div>
+          <div class="check-mark">月9万円〜のリーズナブルな月額プラン</div>
+        </div>
+        <div class="issue-card fade-in fade-in-delay-3">
+          <div class="issue-icon">📋</div>
+          <div class="issue-num">ISSUE 03</div>
+          <div class="issue-text">営業リストが<br>欲しい</div>
+          <div class="check-mark">弊社が厳選した営業リストをご提供</div>
+        </div>
+        <div class="issue-card fade-in fade-in-delay-4">
+          <div class="issue-icon">🎯</div>
+          <div class="issue-num">ISSUE 04</div>
+          <div class="issue-text">受注確度の高い<br>アポを獲得したい</div>
+          <div class="check-mark">決裁者へのダイレクトアプローチを実現</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLOW ===== -->
+  <section id="flow">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">HOW IT WORKS</span>
+        <h2 class="section-title">シンキカイタクの仕組み</h2>
+        <p class="section-desc">4つのステップで、貴社の営業成果を最大化します。</p>
+      </div>
+      <div class="flow-steps">
+        <div class="fade-in fade-in-delay-1">
+          <div class="flow-card">
+            <div class="step-num">1</div>
+            <span class="step-icon">👥</span>
+            <div class="step-title">貴社のための<br>専属チームを組成</div>
+            <p class="step-desc">実績あるコンサルタントが立案段階から参加。貴社専任のチームを組成します。</p>
+          </div>
+        </div>
+        <div class="fade-in fade-in-delay-2">
+          <div class="flow-card">
+            <div class="step-num">2</div>
+            <span class="step-icon">🎯</span>
+            <div class="step-title">最適なターゲットの選定・<br>アピール文言の作成</div>
+            <p class="step-desc">貴社の強みを引き出し、刺さるアプローチ文を作成。ターゲットを精密に選定します。</p>
+          </div>
+        </div>
+        <div class="fade-in fade-in-delay-3">
+          <div class="flow-card">
+            <div class="step-num">3</div>
+            <span class="step-icon">💬</span>
+            <div class="step-title">密な<br>コミュニケーション</div>
+            <p class="step-desc">週次レポートと定例MTGで進捗を共有。担当者と密に連携しながら進めます。</p>
+          </div>
+        </div>
+        <div class="fade-in fade-in-delay-4">
+          <div class="flow-card">
+            <div class="step-num">4</div>
+            <span class="step-icon">🔄</span>
+            <div class="step-title">PDCAサイクルの<br>継続</div>
+            <p class="step-desc">結果を分析し、アプローチを継続改善。成果が出るまでPDCAを回し続けます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== METHODS ===== -->
+  <section id="methods">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">STRATEGY &amp; METHODS</span>
+        <h2 class="section-title">営業戦略・手法</h2>
+        <p class="section-desc">複数のアプローチを組み合わせることで、決裁者へのリーチ率を最大化します。</p>
+      </div>
+      <div class="methods-grid">
+        <div class="method-card fade-in fade-in-delay-1">
+          <span class="method-icon">📧</span>
+          <div class="method-title">問い合わせフォーム営業</div>
+          <p class="method-desc">企業の問い合わせフォームから直接アプローチ。担当者の目に触れやすく、開封率が高い手法です。スパムフィルターを回避し、確実にメッセージを届けます。</p>
+        </div>
+        <div class="method-card fade-in fade-in-delay-2">
+          <span class="method-icon">📞</span>
+          <div class="method-title">テレアポ</div>
+          <p class="method-desc">電話による直接アプローチで即時反応を得ます。トークスクリプトを精緻に設計し、受付突破から決裁者アポまで一貫して対応します。</p>
+        </div>
+        <div class="method-card fade-in fade-in-delay-3">
+          <span class="method-icon">✉️</span>
+          <div class="method-title">手書き風手紙</div>
+          <p class="method-desc">温かみのある手書き風レターで他社との差別化を図ります。受け取った担当者の印象に残り、返信率・商談化率の向上に寄与します。</p>
+        </div>
+        <div class="method-card fade-in fade-in-delay-4">
+          <span class="method-icon">📨</span>
+          <div class="method-title">メールマーケティング</div>
+          <p class="method-desc">継続的なメールアプローチで関係性を醸成。開封率・クリック率を分析しながら、最適なタイミングで商談につなげます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section id="pricing">
+    <div class="section-inner">
+      <div class="section-header text-center">
+        <span class="section-label">PRICING</span>
+        <h2 class="section-title">料金プラン</h2>
+        <p class="section-desc mx-auto">貴社の規模や目標に合わせて選べる3つのプランをご用意しています。</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- LIGHT -->
+        <div class="plan-card fade-in fade-in-delay-1">
+          <div class="plan-name">ライト</div>
+          <div class="plan-price">9<span style="font-size:1.4rem">万円</span><span class="plan-price-unit">/月</span></div>
+          <div class="plan-price-note">送付 600社 / 月</div>
+          <div class="plan-divider"></div>
+          <div class="plan-feature">専任チームによる運用</div>
+          <div class="plan-feature">営業リストの提供</div>
+          <div class="plan-feature">フォーム営業対応</div>
+          <div class="plan-feature">週次レポート</div>
+          <div class="plan-feature">最低利用期間：6ヶ月</div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-outline">お申し込み・資料請求</a>
+          </div>
+        </div>
+        <!-- STANDARD -->
+        <div class="plan-card featured fade-in fade-in-delay-2">
+          <div class="plan-badge">★ おすすめ</div>
+          <div class="plan-name">スタンダード</div>
+          <div class="plan-price">18<span style="font-size:1.4rem">万円</span><span class="plan-price-unit">/月</span></div>
+          <div class="plan-price-note">送付 1,200社 / 月</div>
+          <div class="plan-divider"></div>
+          <div class="plan-feature">専任チームによる運用</div>
+          <div class="plan-feature">営業リストの提供</div>
+          <div class="plan-feature">フォーム営業＋テレアポ対応</div>
+          <div class="plan-feature">手書き風手紙対応</div>
+          <div class="plan-feature">週次レポート＋定例MTG</div>
+          <div class="plan-feature">最低利用期間：6ヶ月</div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-outline">お申し込み・資料請求</a>
+          </div>
+        </div>
+        <!-- PRO -->
+        <div class="plan-card fade-in fade-in-delay-3">
+          <div class="plan-name">プロ</div>
+          <div class="plan-price">36<span style="font-size:1.4rem">万円</span><span class="plan-price-unit">/月〜</span></div>
+          <div class="plan-price-note">オーダーメイドカスタマイズ</div>
+          <div class="plan-divider"></div>
+          <div class="plan-feature">全手法フル活用</div>
+          <div class="plan-feature">営業リストの提供</div>
+          <div class="plan-feature">専任コンサルタントによる戦略立案</div>
+          <div class="plan-feature">カスタム施策の実施</div>
+          <div class="plan-feature">詳細レポート＋随時MTG</div>
+          <div class="plan-feature">最低利用期間：6ヶ月</div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-outline">お申し込み・資料請求</a>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-note">
+        <strong>最低利用期間：6ヶ月</strong>｜すべてのプランで営業リストをご提供｜完全オンラインで日本全国対応
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-header text-center">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">よくある質問</h2>
+        <p class="section-desc mx-auto">お問い合わせの多いご質問にお答えします。</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">営業対象となる地域はありますか？</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-text"><span class="faq-a-label">A</span><span>完全オンラインで日本全国に対応しています。地域による制限はありません。フォーム営業・テレアポ・手紙いずれの手法も、全国の企業様に向けてアプローチが可能です。</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">対象業種はありますか？</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-text"><span class="faq-a-label">A</span><span>BtoBであれば全業種に対応しています。IT・製造・コンサルティング・人材・物流など、さまざまな業種での実績がございます。まずはお気軽にご相談ください。</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">他社との違いは何ですか？</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-text"><span class="faq-a-label">A</span><span>実績あるコンサルタントが立案段階から参加することが最大の特徴です。単なる代行業者ではなく、営業戦略から一緒に考え、PDCAを継続して回すことで成果にこだわります。また、フォーム営業・テレアポ・手紙の3手法を組み合わせたアプローチは他社にない強みです。</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">営業リストはもらえますか？</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-text"><span class="faq-a-label">A</span><span>はい、弊社からご提供します。貴社のターゲット条件に合わせて厳選した営業リストをご用意いたします。別途費用は発生しません。</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">成果報酬のプランはありますか？</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-text"><span class="faq-a-label">A</span><span>現在、月額定額プランのみのご提供となっています。成果報酬型と異なり、件数に関わらず一定の費用で安定したアプローチを継続できるため、長期的な営業基盤の構築に適しています。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-header text-center">
+        <span class="section-label">CONTACT</span>
+        <h2 class="section-title">お申し込み・無料相談</h2>
+        <p class="section-desc mx-auto">まずはお気軽にご相談ください。専任のコンサルタントが丁寧にご対応します。</p>
+      </div>
+      <div class="form-wrap">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">会社名<span class="required">*</span></label>
+              <input type="text" id="company" name="company" placeholder="株式会社〇〇" required>
+            </div>
+            <div class="form-group">
+              <label for="department">部署名</label>
+              <input type="text" id="department" name="department" placeholder="営業部">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="lastName">姓<span class="required">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="山田" required>
+            </div>
+            <div class="form-group">
+              <label for="firstName">名<span class="required">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="太郎" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="serviceName">ご検討のプラン</label>
+            <select id="serviceName" name="serviceName">
+              <option value="">選択してください</option>
+              <option value="lite">ライトプラン（9万円/月）</option>
+              <option value="standard">スタンダードプラン（18万円/月）</option>
+              <option value="pro">プロプラン（36万円/月〜）</option>
+              <option value="consult">まずは相談したい</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス<span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="03-0000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="message">ご相談内容</label>
+            <textarea id="message" name="message" placeholder="ご質問・ご要望などをご記入ください"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn-submit">送信する</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">シンキ<span>カイタク</span></div>
+          <div class="footer-company">株式会社アスレバ</div>
+        </div>
+        <div class="footer-info">
+          <p>〒103-0013 東京都中央区日本橋３－２－１４</p>
+          <p>Email：<a href="mailto:asu_info@asulever.com">asu_info@asulever.com</a></p>
+        </div>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="#issues">課題</a>
+          <a href="#flow">仕組み</a>
+          <a href="#methods">戦略・手法</a>
+          <a href="#pricing">料金</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">お申し込み</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 株式会社アスレバ　シンキカイタク. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== HAMBURGER MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      navMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ===== FAQ ACCORDION =====
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // ===== SCROLL ANIMATIONS =====
+    const fadeEls = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // ===== FORM SUBMIT =====
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const required = this.querySelectorAll('[required]');
+      let valid = true;
+
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#e05252';
+          field.style.boxShadow = '0 0 0 3px rgba(224,82,82,0.12)';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+          field.style.boxShadow = '';
+        }
+      });
+
+      if (!valid) {
+        alert('必須項目をご入力ください。');
+        return;
+      }
+
+      const btn = this.querySelector('.btn-submit');
+      btn.textContent = '送信完了しました！';
+      btn.disabled = true;
+      btn.style.background = '#4caf80';
+      btn.style.boxShadow = 'none';
+      btn.style.cursor = 'default';
+    });
+
+    // ===== NAVBAR SHADOW ON SCROLL =====
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 40) {
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.28)';
+      } else {
+        nav.style.boxShadow = '0 2px 12px rgba(0,0,0,0.18)';
+      }
+    });
+  </script>
+</body>
+</html>
